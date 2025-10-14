@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoPro - منصة التداول الآلي الذكي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Crypto<span>Pro</span></h2>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">الرئيسية</a>
+                <a href="#features" class="nav-link">المميزات</a>
+                <a href="#platforms" class="nav-link">المنصات</a>
+                <a href="#trading" class="nav-link">نظام التداول</a>
+                <a href="#referral" class="nav-link">نظام العمولات</a>
+                <a href="dashboard.html" class="nav-link">لوحة التحكم</a>
+            </div>
+            <div class="nav-actions">
+                <select id="languageSelect" class="language-select">
+                    <option value="ar">العربية</option>
+                    <option value="en">English</option>
+                </select>
+                <button class="btn-login" onclick="openLoginModal()">تسجيل الدخول</button>
+                <button class="btn-register" onclick="openRegisterModal()">إنشاء حساب</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- قسم الهيرو -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>تداول ذكي <span class="gradient-text">أرباح مستمرة</span></h1>
+            <p>منصة التداول الآلي الأولى التي تجمع بين الذكاء الاصطناعي وتحليل السوق المتقدم</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <h3>15,000+</h3>
+                    <p>مستخدم نشط</p>
+                </div>
+                <div class="stat">
+                    <h3>$42M+</h3>
+                    <p>أرباح محققة</p>
+                </div>
+                <div class="stat">
+                    <h3>24/7</h3>
+                    <p>تداول مستمر</p>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <button class="btn-primary" onclick="openRegisterModal()">ابدأ الآن مجاناً</button>
+                <button class="btn-secondary" onclick="scrollToSection('features')">شاهد المميزات</button>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="dashboard-preview">
+                <div class="preview-header">
+                    <span>لوحة التداول الحي</span>
+                    <div class="status-indicator">
+                        <span class="status-dot"></span>
+                        <span>نشط</span>
+                    </div>
+                </div>
+                <div class="preview-content">
+                    <div class="trade-item">
+                        <span class="coin">BTC/USDT</span>
+                        <span class="action buy">شراء</span>
+                        <span class="profit">+8.2%</span>
+                    </div>
+                    <div class="trade-item">
+                        <span class="coin">ETH/USDT</span>
+                        <span class="action sell">بيع</span>
+                        <span class="profit">+7.8%</span>
+                    </div>
+                    <div class="trade-item">
+                        <span class="coin">ADA/USDT</span>
+                        <span class="action buy">شراء</span>
+                        <span class="profit">+8.5%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم نظام التداول الآلي -->
+    <section id="trading" class="trading-system">
+        <div class="container">
+            <h2 class="section-title">🤖 نظام التداول الآلي الذكي</h2>
+            <div class="trading-grid">
+                <div class="trading-card">
+                    <h3>كيف يعمل</h3>
+                    <ul>
+                        <li>✅ اتصال مباشر بحسابات التبادل عبر API</li>
+                        <li>✅ تحليل السوق تلقائياً باستراتيجيات متعددة</li>
+                        <li>✅ دخول وخروج آلي من الصفقات</li>
+                        <li>✅ إدارة وقف الخسارة وجني الأرباح تلقائياً</li>
+                    </ul>
+                </div>
+                <div class="trading-card">
+                    <h3>المميزات</h3>
+                    <ul>
+                        <li>🔄 تداول مستمر 24/7 بدون توقف</li>
+                        <li>⚡ استغلال جميع فرص السوق</li>
+                        <li>🚀 تنفيذ فوري للصفقات</li>
+                        <li>🎯 لا حاجة للخبرة في التداول</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المنصات المدعومة -->
+    <section id="platforms" class="platforms-section">
+        <div class="container">
+            <h2 class="section-title">🔗 المنصات المدعومة</h2>
+            <div class="platforms-grid">
+                <div class="platform-card">
+                    <div class="platform-icon">🔵</div>
+                    <h4>Binance</h4>
+                    <p>أكبر منصة تداول في العالم</p>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">⚡</div>
+                    <h4>Coinbase</h4>
+                    <p>أشهر منصة للمبتدئين</p>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">🟢</div>
+                    <h4>Bybit</h4>
+                    <p>رائدة في التداول المشتقات</p>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">🟠</div>
+                    <h4>KuCoin</h4>
+                    <p>منصة Altcoins الشهيرة</p>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">🔴</div>
+                    <h4>OKX</h4>
+                    <p>منصة شاملة متعددة الخدمات</p>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">🔵</div>
+                    <h4>Gate.io</h4>
+                    <p>منصة الـ Altcoins الكبيرة</p>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">🟤</div>
+                    <h4>Bitget</h4>
+                    <p>منصة التداول بالنسخ</p>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">⚪</div>
+                    <h4>Kraken</h4>
+                    <p>منصة أوروبية موثوقة</p>
+                </div>
+            </div>
+            
+            <div class="api-connection">
+                <h3>كيفية الربط</h3>
+                <div class="connection-steps">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <p>مفتاح API (API Key)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <p>السر السري (API Secret)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <p>البوت يتصل مباشرة بالمنصة</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <p>بدء التداول تلقائياً</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التحليل المتقدم -->
+    <section id="analysis" class="analysis-section">
+        <div class="container">
+            <h2 class="section-title">📊 أنظمة التحليل المتقدمة</h2>
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <h4>📈 التحليل الفني المتقدم</h4>
+                    <ul>
+                        <li>RSI - قياس momentum</li>
+                        <li>MACD - تحديد اتجاه السوق</li>
+                        <li>Bollinger Bands - قياس التقلبات</li>
+                        <li>Fibonacci - مستويات الدعم والمقاومة</li>
+                    </ul>
+                </div>
+                <div class="analysis-card">
+                    <h4>🕯️ تحليل الشموع اليابانية</h4>
+                    <ul>
+                        <li>🔨 المطرقة - إشارة شراء</li>
+                        <li>🔄 الابتلاع - انعكاس قوي</li>
+                        <li>⚪ الدوجي - حالة التردد</li>
+                        <li>🌟 نجمة الصباح/المساء - انعكاسات</li>
+                    </ul>
+                </div>
+                <div class="analysis-card">
+                    <h4>🐋 متابعة الحيتان</h4>
+                    <ul>
+                        <li>تحركات المحافظ الكبيرة</li>
+                        <li>أوامر الشراء/البيع الضخمة</li>
+                        <li>تحليل السيولة في السوق</li>
+                        <li>مراقبة تحركات المؤسسات</li>
+                    </ul>
+                </div>
+                <div class="analysis-card">
+                    <h4>📊 التحليل الحجمي</h4>
+                    <ul>
+                        <li>أحجام التداول</li>
+                        <li>تدفق الأموال</li>
+                        <li>مستويات السيولة</li>
+                        <li>قوة الاتجاه</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم إدارة المخاطر -->
+    <section id="risk" class="risk-section">
+        <div class="container">
+            <h2 class="section-title">🛡️ إدارة المخاطر المتقدمة</h2>
+            <div class="risk-grid">
+                <div class="risk-card">
+                    <h4>نظام الحماية من الخسائر</h4>
+                    <ul>
+                        <li>⛔ إيقاف تلقائي بعد 3 خسائر متتالية</li>
+                        <li>🔄 استئناف تلقائي في اليوم التالي</li>
+                        <li>📊 مراقبة مستمرة للأداء</li>
+                        <li>🚨 تنبيهات فورية عند تجاوز الحدود</li>
+                    </ul>
+                </div>
+                <div class="risk-card">
+                    <h4>إعدادات التداول الذكية</h4>
+                    <ul>
+                        <li>🎯 الهدف: 8% ربح لكل صفقة</li>
+                        <li>🛡️ وقف الخسارة: 5% حماية</li>
+                        <li>🔄 تحريك الستوب لنقطة التعادل عند 3% ربح</li>
+                        <li>💰 حجم الصفقة: 20% لكل 100$</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم نظام العمولات -->
+    <section id="referral" class="referral-section">
+        <div class="container">
+            <h2 class="section-title">💰 نظام العمولات والإحالات</h2>
+            <div class="referral-levels">
+                <div class="level-card bronze">
+                    <div class="level-icon">🥉</div>
+                    <h4>BRONZE</h4>
+                    <p class="requirement">10 دعوات</p>
+                    <p class="commission">عمولة 2.5%</p>
+                    <p class="benefits">الوصول الأساسي</p>
+                </div>
+                <div class="level-card silver">
+                    <div class="level-icon">🥈</div>
+                    <h4>SILVER</h4>
+                    <p class="requirement">25 دعوة</p>
+                    <p class="commission">عمولة 4.0%</p>
+                    <p class="benefits">تقارير متقدمة</p>
+                </div>
+                <div class="level-card gold">
+                    <div class="level-icon">🥇</div>
+                    <h4>GOLD</h4>
+                    <p class="requirement">60 دعوة</p>
+                    <p class="commission">عمولة 6.5%</p>
+                    <p class="benefits">إشارات حصرية</p>
+                </div>
+                <div class="level-card diamond">
+                    <div class="level-icon">💎</div>
+                    <h4>DIAMOND</h4>
+                    <p class="requirement">100 دعوة</p>
+                    <p class="commission">عمولة 9.0%</p>
+                    <p class="benefits">كل المميزات + دعم متميز</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأمان -->
+    <section id="security" class="security-section">
+        <div class="container">
+            <h2 class="section-title">🔐 نظام الأمان والحماية</h2>
+            <div class="security-grid">
+                <div class="security-card">
+                    <h4>حماية البيانات</h4>
+                    <ul>
+                        <li>🔒 تشفير متقدم لجميع مفاتيح API</li>
+                        <li>🛡️ تخزين آمن في قاعدة البيانات</li>
+                        <li>🔑 مصادقة قوية للمستخدمين</li>
+                        <li>📧 إشعارات أمان لأي نشاط مشبوه</li>
+                    </ul>
+                </div>
+                <div class="security-card">
+                    <h4>حماية الأموال</h4>
+                    <ul>
+                        <li>⚠️ البوت لا يمكنه سحب الأموال</li>
+                        <li>📊 مراقبة مستمرة لأداء التداول</li>
+                        <li>🚨 إيقاف تلقائي في حال الخسائر</li>
+                        <li>💾 نسخ احتياطي يومي للبيانات</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم كيفية البدء -->
+    <section id="start" class="start-section">
+        <div class="container">
+            <h2 class="section-title">🎯 كيف تبدأ؟</h2>
+            <div class="start-steps">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <h4>التسجيل في المنصة</h4>
+                    <p>أنشئ حسابك في دقائق</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <h4>ربط حساب التبادل</h4>
+                    <p>استخدم API Key و Secret</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <h4>ضبط الإعدادات</h4>
+                    <p>استخدم الإعدادات الافتراضية أو المخصصة</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">4</span>
+                    <h4>بدء التداول الآلي</h4>
+                    <p>شاهد البوت يعمل تلقائياً</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CryptoPro</h3>
+                    <p>منصة التداول الآلي الذكي للعملات الرقمية</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <a href="#home">الرئيسية</a>
+                    <a href="#features">المميزات</a>
+                    <a href="#platforms">المنصات</a>
+                    <a href="dashboard.html">لوحة التحكم</a>
+                </div>
+                <div class="footer-section">
+                    <h4>الدعم</h4>
+                    <a href="#">الأسئلة الشائعة</a>
+                    <a href="#">الاتصال بنا</a>
+                    <a href="#">الشروط والأحكام</a>
+                    <a href="#">الخصوصية</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CryptoPro. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- موديلات التسجيل -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>تسجيل الدخول</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="البريد الإلكتروني" required>
+                <input type="password" placeholder="كلمة المرور" required>
+                <button type="submit" class="btn-primary">تسجيل الدخول</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegisterModal()">&times;</span>
+            <h2>إنشاء حساب</h2>
+            <form id="registerForm">
+                <input type="text" placeholder="اسم المستخدم" required>
+                <input type="email" placeholder="البريد الإلكتروني" required>
+                <input type="password" placeholder="كلمة المرور" required>
+                <input type="tel" placeholder="رقم الهاتف">
+                <button type="submit" class="btn-primary">إنشاء حساب</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - CryptoPro</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dashboard {
+            padding: 120px 2rem 2rem;
+            min-height: 100vh;
+            background: var(--dark);
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .sidebar {
+            background: var(--primary);
+            border-radius: 15px;
+            padding: 2rem;
+            height: fit-content;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+        }
+
+        .sidebar-menu li {
+            margin-bottom: 1rem;
+        }
+
+        .sidebar-menu a {
+            color: var(--light);
+            text-decoration: none;
+            padding: 0.8rem 1rem;
+            display: block;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .sidebar-menu a:hover,
+        .sidebar-menu a.active {
+            background: var(--gradient);
+            color: var(--dark);
+        }
+
+        .main-content {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .stats-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            background: var(--gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid var(--secondary);
+        }
+
+        .stat-card h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .trading-section {
+            background: var(--primary);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .exchange-connection {
+            background: var(--gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .api-form {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .api-form input {
+            padding: 1rem;
+            background: var(--dark);
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: var(--light);
+        }
+
+        .trading-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .control-btn {
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .btn-start {
+            background: var(--accent);
+            color: var(--dark);
+        }
+
+        .btn-stop {
+            background: #FF6B6B;
+            color: var(--light);
+        }
+
+        .btn-settings {
+            background: var(--secondary);
+            color: var(--dark);
+        }
+
+        .trades-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+
+        .trades-table th,
+        .trades-table td {
+            padding: 1rem;
+            text-align: right;
+            border-bottom: 1px solid #333;
+        }
+
+        .trades-table th {
+            background: var(--gray);
+            color: var(--secondary);
+        }
+
+        .profit-positive {
+            color: var(--accent);
+        }
+
+        .profit-negative {
+            color: #FF6B6B;
+        }
+    </style>
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Crypto<span>Pro</span></h2>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html">الرئيسية</a>
+                <a href="index.html#features">المميزات</a>
+                <a href="index.html#platforms">المنصات</a>
+                <a href="index.html#referral">نظام العمولات</a>
+                <a href="dashboard.html" class="nav-link active">لوحة التحكم</a>
+            </div>
+            <div class="nav-actions">
+                <select id="languageSelect" class="language-select">
+                    <option value="ar">العربية</option>
+                    <option value="en">English</option>
+                </select>
+                <button class="btn-login" onclick="logout()">تسجيل الخروج</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- لوحة التحكم -->
+    <div class="dashboard">
+        <div class="dashboard-grid">
+            <!-- الشريط الجانبي -->
+            <div class="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="#overview" class="active">نظرة عامة</a></li>
+                    <li><a href="#trading">التداول الآلي</a></li>
+                    <li><a href="#exchanges">الحسابات المتصلة</a></li>
+                    <li><a href="#referrals">نظام الإحالات</a></li>
+                    <li><a href="#reports">التقارير</a></li>
+                    <li><a href="#settings">الإعدادات</a></li>
+                </ul>
+            </div>
+
+            <!-- المحتوى الرئيسي -->
+            <div class="main-content">
+                <!-- إحصائيات سريعة -->
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <h3>$2,450</h3>
+                        <p>رصيد الحساب</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>$1,240</h3>
+                        <p>أرباح اليوم</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>18</h3>
+                        <p>الصفقات النشطة</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>8.2%</h3>
+                        <p>متوسط الربح</p>
+                    </div>
+                </div>
+
+                <!-- قسم التداول -->
+                <div class="trading-section">
+                    <h3>🤖 التداول الآلي</h3>
+                    
+                    <!-- ربط المنصة -->
+                    <div class="exchange-connection">
+                        <h4>ربط حساب التبادل</h4>
+                        <div class="api-form">
+                            <select>
+                                <option value="">اختر المنصة</option>
+                                <option value="binance">Binance</option>
+                                <option value="coinbase">Coinbase</option>
+                                <option value="bybit">Bybit</option>
+                                <option value="kucoin">KuCoin</option>
+                            </select>
+                            <input type="text" placeholder="API Key">
+                            <input type="text" placeholder="API Secret">
+                            <button class="btn-primary">ربط الحساب</button>
+                        </div>
+                    </div>
+
+                    <!-- عناصر التحكم -->
+                    <div class="trading-controls">
+                        <button class="control-btn btn-start" onclick="startTrading()">بدء التداول</button>
+                        <button class="control-btn btn-stop" onclick="stopTrading()">إيقاف التداول</button>
+                        <button class="control-btn btn-settings" onclick="openSettings()">الإعدادات</button>
+                    </div>
+
+                    <!-- جدول الصفقات -->
+                    <table class="trades-table">
+                        <thead>
+                            <tr>
+                                <th>الزوج</th>
+                                <th>النوع</th>
+                                <th>الحجم</th>
+                                <th>سعر الدخول</th>
+                                <th>السعر الحالي</th>
+                                <th>الربح/الخسارة</th>
+                                <th>الحالة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>BTC/USDT</td>
+                                <td>شراء</td>
+                                <td>0.1</td>
+                                <td>$42,100</td>
+                                <td>$45,200</td>
+                                <td class="profit-positive">+8.2%</td>
+                                <td>نشط</td>
+                            </tr>
+                            <tr>
+                                <td>ETH/USDT</td>
+                                <td>بيع</td>
+                                <td>2.5</td>
+                                <td>$2,850</td>
+                                <td>$2,620</td>
+                                <td class="profit-positive">+7.8%</td>
+                                <td>نشط</td>
+                            </tr>
+                            <tr>
+                                <td>ADA/USDT</td>
+                                <td>شراء</td>
+                                <td>1000</td>
+                                <td>$0.48</td>
+                                <td>$0.52</td>
+                                <td class="profit-positive">+8.5%</td>
+                                <td>نشط</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- قسم الإحالات -->
+                <div class="referral-section">
+                    <h3>💰 نظام الإحالات</h3>
+                    <div class="referral-info">
+                        <div class="referral-stats">
+                            <div class="stat">
+                                <h4>عدد المدعوين</h4>
+                                <p>15</p>
+                            </div>
+                            <div class="stat">
+                                <h4>إجمالي العمولات</h4>
+                                <p>$1,250</p>
+                            </div>
+                            <div class="stat">
+                                <h4>المستوى الحالي</h4>
+                                <p>🥈 SILVER</p>
+                            </div>
+                        </div>
+                        <div class="referral-link">
+                            <h4>رابط الدعوة الخاص بك:</h4>
+                            <div class="link-container">
+                                <input type="text" value="https://cryptopro.com/ref/abc123" readonly>
+                                <button onclick="copyReferralLink()">نسخ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
