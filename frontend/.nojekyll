@@ -1,0 +1,2 @@
+# هذا الملف بيخلي GitHub يتعامل مع الموقع كـ static site عادي
+touch frontend/.nojekyll
