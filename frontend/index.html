@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoPro - منصة التداول الآلي الأولى</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading" class="loading">
+        <div class="loading-spinner">
+            <i class="fas fa-robot"></i>
+            <p>جاري تحميل CryptoPro...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fab fa-bitcoin"></i>
+                    <span>CryptoPro</span>
+                </div>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="#home" class="nav-link">🏠 الرئيسية</a>
+                    <a href="#features" class="nav-link">🚀 المميزات</a>
+                    <a href="#platforms" class="nav-link">🔗 المنصات</a>
+                    <a href="#how-it-works" class="nav-link">⚙️ كيف يعمل</a>
+                    <a href="#pricing" class="nav-link">💲 الأسعار</a>
+                    <a href="#referral" class="nav-link">👥 نظام الإحالات</a>
+                </div>
+
+                <div class="nav-actions">
+                    <select id="languageSelector" class="language-selector">
+                        <option value="ar">العربية 🇸🇦</option>
+                        <option value="en">English 🇺🇸</option>
+                    </select>
+                    <button class="btn btn-secondary" onclick="openLoginModal()">🔐 تسجيل الدخول</button>
+                    <button class="btn btn-primary" onclick="openRegisterModal()">📝 إنشاء حساب</button>
+                </div>
+
+                <div class="mobile-menu" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    🤖 <span class="gradient-text">CryptoPro</span><br>
+                    أرباح مستمرة 24/7
+                </h1>
+                <p class="hero-description">
+                    منصة التداول الآلي الأولى التي تجمع بين الذكاء الاصطناعي 
+                    وتحليل السوق المتقدم لتحقيق أرباح مستمرة
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">+15,050</div>
+                        <div class="stat-label">👤 مستخدم نشط</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">+$42.2M</div>
+                        <div class="stat-label">💰 أرباح محققة</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">⚡ تداول مستمر</div>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-large" onclick="openRegisterModal()">
+                        🚀 ابدأ الآن مجاناً
+                    </button>
+                    <button class="btn btn-outline btn-large" onclick="scrollToSection('features')">
+                        📊 اكتشف المميزات
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="trading-animation">
+                    <div class="chart-container">
+                        <!-- سيتم إضافة الرسوم المتحركة عبر JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">🚀 مميزات منصتنا المتقدمة</h2>
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>نظام التداول الآلي الذكي</h3>
+                    <ul>
+                        <li>✅ تداول مستمر 24/7 بدون توقف</li>
+                        <li>✅ استغلال جميع فرص السوق تلقائياً</li>
+                        <li>✅ تنفيذ فوري للصفقات</li>
+                        <li>✅ لا حاجة للخبرة في التداول</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>إدارة المخاطر المتقدمة</h3>
+                    <ul>
+                        <li>🎯 الهدف: 8% ربح لكل صفقة</li>
+                        <li>🛡️ وقف الخسارة: 5% حماية رأس المال</li>
+                        <li>🔄 تحريك الستوب لنقطة التعادل عند 3% ربح</li>
+                        <li>💰 حجم الصفقة: 20% لكل 100$</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>أنظمة التحليل المتقدمة</h3>
+                    <ul>
+                        <li>📈 RSI & MACD & Bollinger Bands</li>
+                        <li>🔍 Fibonacci Retracement</li>
+                        <li>🐋 متابعة تحركات الحيتان</li>
+                        <li>📊 التحليل الحجمي المتقدم</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>نظام العمولات والإحالات</h3>
+                    <ul>
+                        <li>🥉 BRONZE: 2.5% عمولة</li>
+                        <li>🥈 SILVER: 4.0% عمولة</li>
+                        <li>🥇 GOLD: 6.5% عمولة</li>
+                        <li>💎 DIAMOND: 9.0% عمولة</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section id="platforms" class="platforms">
+        <div class="container">
+            <h2 class="section-title">🔗 المنصات المدعومة</h2>
+            <div class="platforms-grid">
+                <div class="platform-card">
+                    <div class="platform-icon">🔵</div>
+                    <h3>Binance</h3>
+                    <p>أكبر منصة تداول في العالم</p>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">⚡</div>
+                    <h3>Coinbase</h3>
+                    <p>أشهر منصة للمبتدئين</p>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">🟢</div>
+                    <h3>Bybit</h3>
+                    <p>رائدة في التداول المشتقات</p>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">🟠</div>
+                    <h3>KuCoin</h3>
+                    <p>منصة Altcoins الشهيرة</p>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">🔴</div>
+                    <h3>OKX</h3>
+                    <p>منصة شاملة متعددة الخدمات</p>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">🔵</div>
+                    <h3>Gate.io</h3>
+                    <p>منصة الـ Altcoins الكبيرة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>🔐 تسجيل الدخول</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="📧 البريد الإلكتروني" required>
+                <input type="password" placeholder="🔒 كلمة المرور" required>
+                <button type="submit" class="btn btn-primary">تسجيل الدخول</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegisterModal()">&times;</span>
+            <h2>📝 إنشاء حساب جديد</h2>
+            <form id="registerForm">
+                <input type="text" placeholder="👤 الاسم الكامل" required>
+                <input type="email" placeholder="📧 البريد الإلكتروني" required>
+                <input type="password" placeholder="🔒 كلمة المرور" required>
+                <input type="password" placeholder="🔐 تأكيد كلمة المرور" required>
+                <button type="submit" class="btn btn-primary">إنشاء حساب</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

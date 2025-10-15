@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - CryptoPro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Dashboard Header -->
+    <header class="dashboard-header">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fab fa-bitcoin"></i>
+                <span>CryptoPro</span>
+            </div>
+            
+            <div class="user-menu">
+                <span class="user-name">👤 محمد أحمد</span>
+                <div class="user-dropdown">
+                    <a href="dashboard.html">📊 لوحة التحكم</a>
+                    <a href="#profile">👤 الملف الشخصي</a>
+                    <a href="#settings">⚙️ الإعدادات</a>
+                    <a href="#" onclick="logout()">🚪 تسجيل الخروج</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="#overview" class="nav-item active">
+                    <i class="fas fa-chart-line"></i>
+                    <span>📊 النظرة العامة</span>
+                </a>
+                <a href="#trading" class="nav-item">
+                    <i class="fas fa-robot"></i>
+                    <span>🤖 التداول الآلي</span>
+                </a>
+                <a href="#exchanges" class="nav-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>🔗 المنصات المتصلة</span>
+                </a>
+                <a href="#analytics" class="nav-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>📈 التحليلات</span>
+                </a>
+                <a href="#referrals" class="nav-item">
+                    <i class="fas fa-users"></i>
+                    <span>👥 نظام الإحالات</span>
+                </a>
+                <a href="#payments" class="nav-item">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>💸 المدفوعات</span>
+                </a>
+                <a href="#support" class="nav-item">
+                    <i class="fas fa-headset"></i>
+                    <span>📞 الدعم الفني</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Overview Section -->
+            <section id="overview" class="dashboard-section active">
+                <h2>📊 النظرة العامة</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-info">
+                            <h3>إجمالي الأرباح</h3>
+                            <span class="stat-value">$12,450</span>
+                            <span class="stat-change positive">+8.2%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-info">
+                            <h3>الصفقات النشطة</h3>
+                            <span class="stat-value">24</span>
+                            <span class="stat-change positive">+3</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">📈</div>
+                        <div class="stat-info">
+                            <h3>معدل النجاح</h3>
+                            <span class="stat-value">87.5%</span>
+                            <span class="stat-change positive">+2.1%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-info">
+                            <h3>المدعوون</h3>
+                            <span class="stat-value">15</span>
+                            <span class="stat-change positive">+5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trading Chart -->
+                <div class="chart-container">
+                    <h3>📊 أداء التداول</h3>
+                    <div id="tradingChart" class="trading-chart">
+                        <!-- سيتم إضافة الرسم البياني عبر JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Recent Trades -->
+                <div class="recent-trades">
+                    <h3>🔄 آخر الصفقات</h3>
+                    <div class="trades-table">
+                        <div class="trade-row header">
+                            <span>الزوج</span>
+                            <span>النوع</span>
+                            <span>الحجم</span>
+                            <span>السعر</span>
+                            <span>الربح</span>
+                            <span>الحالة</span>
+                        </div>
+                        <div class="trade-row">
+                            <span>BTC/USDT</span>
+                            <span>🟢 شراء</span>
+                            <span>0.05 BTC</span>
+                            <span>$42,150</span>
+                            <span class="profit">+$420</span>
+                            <span class="status completed">✅ مكتمل</span>
+                        </div>
+                        <div class="trade-row">
+                            <span>ETH/USDT</span>
+                            <span>🔴 بيع</span>
+                            <span>2.5 ETH</span>
+                            <span>$2,850</span>
+                            <span class="profit">+$285</span>
+                            <span class="status completed">✅ مكتمل</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trading Section -->
+            <section id="trading" class="dashboard-section">
+                <h2>🤖 إعدادات التداول الآلي</h2>
+                <!-- سيتم إضافة محتوى التداول -->
+            </section>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
