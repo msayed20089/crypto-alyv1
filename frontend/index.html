@@ -1,208 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CryptoPro - منصة التداول الآلي الذكي</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- شريط التنقل -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>🚀 Crypto<span>Pro</span></h2>
-            </div>
-            <div class="nav-menu">
-                <a href="#home" class="nav-link">🏠 الرئيسية</a>
-                <a href="#features" class="nav-link">⭐ المميزات</a>
-                <a href="#platforms" class="nav-link">🔗 المنصات</a>
-                <a href="#trading" class="nav-link">🤖 نظام التداول</a>
-                <a href="#referral" class="nav-link">💰 العمولات</a>
-                <a href="dashboard.html" class="nav-link">📊 لوحة التحكم</a>
-            </div>
-            <div class="nav-actions">
-                <select id="languageSelect" class="language-select">
-                    <option value="ar">🇸🇦 العربية</option>
-                    <option value="en">🇺🇸 English</option>
-                </select>
-                <button class="btn-login" onclick="openLoginModal()">🔐 تسجيل الدخول</button>
-                <button class="btn-register" onclick="openRegisterModal()">🚀 إنشاء حساب</button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- قسم الهيرو -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>تداول ذكي <span class="gradient-text">أرباح مستمرة</span></h1>
-            <p>منصة التداول الآلي الأولى التي تجمع بين الذكاء الاصطناعي وتحليل السوق المتقدم لتحقيق أرباح مستمرة 24/7</p>
-            <div class="hero-stats">
-                <div class="stat">
-                    <h3>15,000+</h3>
-                    <p>👥 مستخدم نشط</p>
-                </div>
-                <div class="stat">
-                    <h3>$42M+</h3>
-                    <p>💸 أرباح محققة</p>
-                </div>
-                <div class="stat">
-                    <h3>24/7</h3>
-                    <p>⏰ تداول مستمر</p>
-                </div>
-            </div>
-            <div class="hero-actions">
-                <button class="btn-primary" onclick="openRegisterModal()">🚀 ابدأ الآن مجاناً</button>
-                <button class="btn-secondary" onclick="scrollToSection('trading')">📊 شاهد المميزات</button>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="dashboard-preview">
-                <div class="preview-header">
-                    <span>📈 لوحة التداول الحي</span>
-                    <div class="status-indicator">
-                        <span class="status-dot"></span>
-                        <span>نشط 🔥</span>
-                    </div>
-                </div>
-                <div class="preview-content">
-                    <div class="trade-item">
-                        <span class="coin">₿ BTC/USDT</span>
-                        <span class="action buy">🔼 شراء</span>
-                        <span class="profit">+8.2% 🎯</span>
-                    </div>
-                    <div class="trade-item">
-                        <span class="coin">⎈ ETH/USDT</span>
-                        <span class="action sell">🔽 بيع</span>
-                        <span class="profit">+7.8% 💰</span>
-                    </div>
-                    <div class="trade-item">
-                        <span class="coin">🅰️ ADA/USDT</span>
-                        <span class="action buy">🔼 شراء</span>
-                        <span class="profit">+8.5% 🚀</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- قسم نظام التداول الآلي -->
-    <section id="trading" class="trading-system">
-        <div class="container">
-            <h2 class="section-title">🤖 نظام التداول الآلي الذكي</h2>
-            <div class="trading-grid">
-                <div class="trading-card">
-                    <h3>⚡ كيف يعمل</h3>
-                    <ul>
-                        <li>🔌 اتصال مباشر بحسابات التبادل عبر API</li>
-                        <li>📊 تحليل السوق تلقائياً باستراتيجيات متعددة</li>
-                        <li>🔄 دخول وخروج آلي من الصفقات</li>
-                        <li>🛡️ إدارة وقف الخسارة وجني الأرباح تلقائياً</li>
-                    </ul>
-                </div>
-                <div class="trading-card">
-                    <h3>🎯 المميزات</h3>
-                    <ul>
-                        <li>⏰ تداول مستمر 24/7 بدون توقف</li>
-                        <li>💡 استغلال جميع فرص السوق</li>
-                        <li>⚡ تنفيذ فوري للصفقات</li>
-                        <li>👶 لا حاجة للخبرة في التداول</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- قسم المنصات المدعومة -->
-    <section id="platforms" class="platforms-section">
-        <div class="container">
-            <h2 class="section-title">🔗 المنصات المدعومة</h2>
-            <div class="platforms-grid">
-                <div class="platform-card">
-                    <div class="platform-icon">🔵</div>
-                    <h4>Binance</h4>
-                    <p>أكبر منصة تداول في العالم</p>
-                </div>
-                <div class="platform-card">
-                    <div class="platform-icon">⚡</div>
-                    <h4>Coinbase</h4>
-                    <p>أشهر منصة للمبتدئين</p>
-                </div>
-                <div class="platform-card">
-                    <div class="platform-icon">🟢</div>
-                    <h4>Bybit</h4>
-                    <p>رائدة في التداول المشتقات</p>
-                </div>
-                <div class="platform-card">
-                    <div class="platform-icon">🟠</div>
-                    <h4>KuCoin</h4>
-                    <p>منصة Altcoins الشهيرة</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- قسم نظام العمولات -->
-    <section id="referral" class="referral-section">
-        <div class="container">
-            <h2 class="section-title">💰 نظام العمولات والإحالات</h2>
-            <div class="referral-levels">
-                <div class="level-card bronze">
-                    <div class="level-icon">🥉</div>
-                    <h4>BRONZE</h4>
-                    <p class="requirement">10 دعوات</p>
-                    <p class="commission">عمولة 2.5%</p>
-                </div>
-                <div class="level-card silver">
-                    <div class="level-icon">🥈</div>
-                    <h4>SILVER</h4>
-                    <p class="requirement">25 دعوة</p>
-                    <p class="commission">عمولة 4.0%</p>
-                </div>
-                <div class="level-card gold">
-                    <div class="level-icon">🥇</div>
-                    <h4>GOLD</h4>
-                    <p class="requirement">60 دعوة</p>
-                    <p class="commission">عمولة 6.5%</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- موديل تسجيل الدخول -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeLoginModal()">&times;</span>
-            <h2>🔐 تسجيل الدخول</h2>
-            <form id="loginForm">
-                <input type="email" placeholder="📧 البريد الإلكتروني" required>
-                <input type="password" placeholder="🔒 كلمة المرور" required>
-                <button type="submit" class="btn-primary">🚀 تسجيل الدخول</button>
-            </form>
-            <div class="modal-links">
-                <p>ليس لديك حساب؟ <a onclick="switchToRegister()">سجل الآن</a></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- موديل إنشاء حساب -->
-    <div id="registerModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeRegisterModal()">&times;</span>
-            <h2>🚀 إنشاء حساب</h2>
-            <form id="registerForm">
-                <input type="text" placeholder="👤 اسم المستخدم" required>
-                <input type="email" placeholder="📧 البريد الإلكتروني" required>
-                <input type="password" placeholder="🔒 كلمة المرور" required>
-                <input type="tel" placeholder="📞 رقم الهاتف">
-                <button type="submit" class="btn-primary">🎉 إنشاء حساب</button>
-            </form>
-            <div class="modal-links">
-                <p>لديك حساب؟ <a onclick="switchToLogin()">سجل الدخول</a></p>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
